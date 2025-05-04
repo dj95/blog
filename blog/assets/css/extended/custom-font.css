@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/raleway.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/raleway.ttf) format('truetype');
+}
+
+.logo, #menu, .main {
+  font-family: Raleway, sans-serif !important;
+}
+
+html {
+  font-family: Raleway, sans-serif !important;
+}
+
+::-webkit-scrollbar {
+     background: var(--theme);
+}
+
+:root {
+  --primary: rgb(5, 20, 59);
+  --secondary: rgb(5, 20, 59);
+  --theme: #ffffff;
+  --code-bg: #fefefe;
+  --tertiary: rgb(219, 232, 248);
+}
+
+.post-entry {
+  box-shadow: 10px 10px 47px -18px rgba(0,0,0,0.25);
+  border: none !important;
+}
+
+.post-entry:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.2s ease;
+}
+
+#searchbox input {
+  border: 1px solid var(--primary);
+}
+
+.terms-tags li a {
+  color: rgb(92, 106, 155);
+  font-weight: bold;
+  padding: 4px 16px;
+}
+
+.dark {
+  --primary: rgb(189, 189, 189);
+  --theme: #1d1d1f;
+  --code-bg: #2d2d2f;
+  --tertiary: rgb(73, 144, 226);
+}
+
+.dark .terms-tags li a {
+  color: rgb(203, 216, 232);
+  font-weight: bold;
+  padding: 4px 16px;
+}

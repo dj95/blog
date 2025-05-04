@@ -1,0 +1,61 @@
+baseURL: 'https://blog.nerd.rocks'
+languageCode: 'en-us'
+title: 'blog.nerd.rocks'
+theme: "PaperMod"
+pagination:
+  pagerSize: 10
+
+params:
+  defaultTheme: "auto"
+  disableThemeToggle: true
+
+  dateFormat: "2006-01-02"
+  disableSummary: false
+  customCSS:
+    - custom.css
+
+  homeInfoParams:
+    Title: Hi there 👋
+    Content: This is my blog, where I occasionally write about things I find interesting. These are mostly technical topics related to programming, DevOps and debugging. I hope you find something useful here.
+  socialIcons:
+    - name: "Github"
+      url: "https://github.com/dj95"
+
+  ShowToc: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  social: true
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    style: catppuccin-mocha
+    tabWidth: 4
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+
+taxonomies:
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
