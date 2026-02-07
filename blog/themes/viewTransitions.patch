@@ -1,0 +1,26 @@
+diff --git a/layouts/_default/list.html b/layouts/_default/list.html
+index 81aea6e..a1633a6 100644
+--- a/layouts/_default/list.html
++++ b/layouts/_default/list.html
+@@ -67,7 +67,7 @@
+   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+   <header class="entry-header">
+-    <h2 class="entry-hint-parent">
++    <h2 class="entry-hint-parent" id="{{ .File.UniqueID }}">
+       {{- .Title }}
+       {{- if .Draft }}
+       <span class="entry-hint" title="Draft">
+diff --git a/layouts/_default/single.html b/layouts/_default/single.html
+index 19a624f..8745fa6 100644
+--- a/layouts/_default/single.html
++++ b/layouts/_default/single.html
+@@ -3,7 +3,7 @@
+ <article class="post-single">
+   <header class="post-header">
+     {{ partial "breadcrumbs.html" . }}
+-    <h1 class="post-title entry-hint-parent">
++    <h1 class="post-title entry-hint-parent" id="{{ .File.UniqueID }}">
+       {{ .Title }}
+       {{- if .Draft }}
+       <span class="entry-hint" title="Draft">

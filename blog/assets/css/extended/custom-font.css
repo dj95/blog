@@ -1,3 +1,12 @@
+@view-transition {
+  navigation: auto;
+}
+
+.entry-hint-parent[id] {
+  view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
+  view-transition-class: title;
+}
+
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
